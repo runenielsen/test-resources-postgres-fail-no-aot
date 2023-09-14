@@ -1,8 +1,8 @@
 plugins {
     id("com.github.johnrengelman.shadow") version "8.1.1"
-    id("io.micronaut.application") version "4.0.3"
-    id("io.micronaut.test-resources") version "4.0.3"
-    id("io.micronaut.aot") version "4.0.3"
+    id("io.micronaut.application") version "4.1.0"
+    id("io.micronaut.test-resources") version "4.1.0"
+//    id("io.micronaut.aot") version "4.1.0"
 }
 
 version = "0.1"
@@ -41,17 +41,17 @@ micronaut {
     testResources {
         additionalModules.add("jdbc-postgresql")
     }
-    aot {
-    // Please review carefully the optimizations enabled below
-    // Check https://micronaut-projects.github.io/micronaut-aot/latest/guide/ for more details
-        optimizeServiceLoading.set(false)
-        convertYamlToJava.set(false)
-        precomputeOperations.set(true)
-        cacheEnvironment.set(true)
-        optimizeClassLoading.set(true)
-        deduceEnvironment.set(true)
-        optimizeNetty.set(true)
-    }
+//    aot {
+//    // Please review carefully the optimizations enabled below
+//    // Check https://micronaut-projects.github.io/micronaut-aot/latest/guide/ for more details
+//        optimizeServiceLoading.set(false)
+//        convertYamlToJava.set(false)
+//        precomputeOperations.set(true)
+//        cacheEnvironment.set(true)
+//        optimizeClassLoading.set(true)
+//        deduceEnvironment.set(true)
+//        optimizeNetty.set(true)
+//    }
 }
 
 
